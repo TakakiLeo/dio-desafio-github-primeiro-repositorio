@@ -1,1 +1,34 @@
+Git e Git Hub
 
+Git - Versionamento de código, 
+
+Git Hub - Hospedagem de código-fonte e arquivos com controle de versão  
+
+COMANDO - dir - listar os arquivos
+	- cd caminho - entrar na pasta
+	- cd .. - voltar uma pasta
+	- cls - limpar a tela OU crtl + l
+	- cd tab - auto completar
+	- mkdir nomeDaPasta - criar pasta
+	- echo nome - vai printar
+	- echo > nome.txt -  criar um arquivo chamado nome.txt
+	- del nomeDoArquivo - Vai deletar todos os arquivos dentro da pasta, porem nao a pasta
+	- rmdir nomeDaPasta /S /Q - remover uma pasta
+	-pwd - vai mostrar o caminho que esta no momento
+	-cat nomeDoArquivo- vai abrir o arquivo
+	-ls -a - mostra pasta oculto
+	-mv nomeDoArquivo ./pastaNova/ - mv vai mover o arquivo nomeDoArquivo para a pastaNova
+	
+	-git init - cria um novo repositório do Git
+	-git add * - Vai pegar todos os arquivos modificados
+	-git add nomeDoArquivo - vai pegar apenas o arquivo selecionado
+	-git commit -m "nome do commit" - vai envepolar e comitar o arquivo.
+	-git status - ajudar a monitorar os arquivos
+	-git push origin master - empurrar o gitlocal para o github
+	-git clone caminho 
+
+SHA1 - Secure Hash Algorithm - Vai pegar o arquivo e vai embaralhar de uma forma espicifica (Criptografar), se mudar algo no arquivo ele vai alterar a criptograifa, porem se voltar a versao passada o codiggo de criptografia vai voltar como era o antigo.
+
+Git Objetos	- BLOBS -> tipo, tamanho, \0 e conteudo = metadados, possui sha1 do arquivo
+		- TREES -> armazenam BLOBS, conjunto de blobs, aponta para um blobs, montar estrutura de onde esta os arquivos, podendo apontar para outra arvore, possui a propria sha1, se mudar um arquivo no blobs, vai alterar o sha1 do blobs consequetemente vai alterar tbm o sha1 da arvore
+		- COMMITS - objeto mais importante, objeto que vai juntar tudo, aponta para uma arvore, parente, autor, mensagem, possui o proprio sha1
